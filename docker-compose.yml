@@ -1,11 +1,12 @@
 version: '3.0'
 
+
 services:
   webserver:
-    container name: firstProject.web
+    container_name: firstProject-web
     build:
       context: .
-      dockerfile: DockerFile.web
+      dockerfile: Dockerfile.web
     volumes:
       - .:/app
       - ./nginx.conf:/etc/nginx/conf.d/default.conf
@@ -13,9 +14,8 @@ services:
       - 8080:80
 
 
-
   app:
-    cotainer_name: firstProject-app
+    container_name: firstProject-app
     build:
       context: .
       dockerfile: Dockerfile.app
