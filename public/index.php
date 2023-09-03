@@ -1,3 +1,2 @@
 <?php
-
-echo "гыыы ;)";
+require('../src/main.php');
